@@ -1,4 +1,4 @@
-<h1 align="left">Olá, <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px"> Meu nome é Erick Fernaando</h1>
+<h1 align="left">Olá, <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px"> Meu nome é Erick Fernando</h1>
 
 - 🔥 Desenvolvedor Júnior JavaScript - ReactJS, NodeJS, CSS3, HTML5. 
 
