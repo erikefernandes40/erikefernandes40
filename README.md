@@ -1,14 +1,12 @@
-<h1 align="left">Olá, <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px"> Meu nome é Erick Fernando</h1>
+<h1 align="left">Olá, <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px">Meu nome é Erick Fernando</h1>
 
-- 🔥 Desenvolvedor Júnior JavaScript - ReactJS, NodeJS, CSS3, HTML5. 
+- 🔥 Desenvolvedor Júnior Typescript - Nestjs, NodeJS, Docker, SQL. 
 
-- 🔭 Atualmente estou a procura da minha primeira oportunidade como Desenvolvedor Web.
+- 🔭 Atualmente atuo como desenvolvedor júnior backend.
 
-- 👨‍💻 Alguns dos meus projetos você encontra em (https://erickfernando.com)
+- 💬 Me interesso muito por: **JavaScript, HTML, CSS, SQL, Node.JS, React.Js, NextJs, NestJs, Typescript, Docker**
 
-- 💬 Me interesso muito por: **JavaScript, HTML, CSS, SQL, Node.JS, React.Js**
-
-- ⚡ Sou simpático e Tranquilo.
+- ⚡ Sou simpático, tranquilo e muito dedicado.
 
 <br><br>
 
