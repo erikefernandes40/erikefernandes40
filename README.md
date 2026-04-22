@@ -1,6 +1,6 @@
 <h1 align="left">Olá, <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px">Meu nome é Erick Fernando</h1>
 
-- 🔥 Desenvolvedor Júnior C#, C++, Typescript - Nestjs, Python, NodeJS, Docker, SQL, Mqtt, Grafana, Prometheus. 
+- 🔥 Desenvolvedor Júnior C#, Typescript - Nestjs, Python, NodeJS, Docker, SQL, Mqtt, Grafana, Prometheus, C++,. 
 
 - 🔭 Atualmente atuo como desenvolvedor júnior backend.
 <br><br>
