@@ -1,6 +1,6 @@
 <h1 align="left">Olá, <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px">Meu nome é Erick Fernando</h1>
 
-- 🔥 Desenvolvedor Júnior C#, Typescript - Nestjs, Python, NodeJS, Docker, SQL, Mqtt, Grafana, Prometheus, C++,. 
+- 🔥 Desenvolvedor Júnior C#, Typescript - Nestjs, Python, NodeJS, Docker, SQL, Mqtt, Grafana, Prometheus, C++
 
 - 🔭 Atualmente atuo como desenvolvedor júnior backend.
 <br><br>
@@ -15,6 +15,12 @@
 ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
 ![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp;
 ![SQLite](https://img.shields.io/badge/-SQLite-05122A?style=flat&logo=sqlite)&nbsp;
+![C#](https://img.shields.io/badge/-C%23-05122A?style=flat&logo=dotnet)&nbsp;
+![TypeScript](https://img.shields.io/badge/-TypeScript-05122A?style=flat&logo=typescript)&nbsp;
+![NestJS](https://img.shields.io/badge/-NestJS-05122A?style=flat&logo=nestjs)&nbsp;
+![Docker](https://img.shields.io/badge/-Docker-05122A?style=flat&logo=docker)&nbsp;
+![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)&nbsp;
+![MQTT](https://img.shields.io/badge/-MQTT-05122A?style=flat&logo=mqtt)&nbsp;
 
 <br><br>
 
