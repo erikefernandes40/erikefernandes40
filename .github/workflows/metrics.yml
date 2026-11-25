@@ -42,7 +42,11 @@ jobs:
           base: header, activity, community, repositories, metadata
           # Inclui os repositórios das organizations (High-Voltage-Equipament) além dos seus.
           repositories_affiliations: owner, collaborator, organization_member
-          repositories: 300
+          # Com a org incluída, lotes de 100 repos dão timeout (HTTP 502) na API do GitHub, e o metrics
+          # não tenta de novo: carrega 0 repos. Além disso, ele busca uma página só. Então os dois valores
+          # ficam iguais e com folga: 40 repos atualizados mais recentemente (50 leva ~9s, no limite).
+          repositories: 40
+          repositories_batch: 40
           # base_indepth fica DESLIGADO de propósito: sem ele, o total de commits usa a Search API
           # (que enxerga os commits na org). Ligado, ele troca isso por várias consultas ano a ano.
           base_indepth: no
