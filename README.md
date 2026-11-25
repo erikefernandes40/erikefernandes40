@@ -27,7 +27,8 @@
 ## ⚙️ &nbsp;GitHub Analytics
 
 <p align="left">
-<img src="/github-metrics.svg" alt="erike fernando's github metrics"/>
+<img width="530em" src="/profile/stats.svg" alt="erike fernando's stats"/>
+<img width="530em" src="/profile/top-langs.svg" alt="erike fernando's most languages"/>
 </p>
 
 <br><br>
