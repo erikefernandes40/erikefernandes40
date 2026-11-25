@@ -36,7 +36,11 @@ jobs:
           options: >-
             username=erikefernandes40&show_icons=true&theme=vision-friendly-dark&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR&show=reviews,prs_merged&number_format=long
 
-      # Card "Most Used Languages": linguagens por tamanho de código nos seus repos e nos da organization.
+      # Card "Most Used Languages": linguagens nos seus repos e nos da organization.
+      # hide: Haxe, Jupyter Notebook e TeX vêm de repos da empresa que não são seus; HTML e CSS
+      #       vêm dos projetos antigos de estudo e dominariam o ranking (continuam nos badges).
+      # size_weight/count_weight 0.5: pesa tamanho do código e nº de repos por igual (recomendado
+      #       na documentação), para poucos repos grandes não distorcerem o resultado.
       - name: Card de linguagens
         uses: stats-organization/github-readme-stats-action@v2
         with:
@@ -45,7 +49,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           fail_on_error: true
           options: >-
-            username=erikefernandes40&layout=compact&langs_count=8&theme=vision-friendly-dark&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR
+            username=erikefernandes40&layout=compact&langs_count=8&theme=vision-friendly-dark&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR&hide=haxe,jupyter%20notebook,tex,html,css&size_weight=0.5&count_weight=0.5
 
       - name: Commit dos cards
         run: |
