@@ -1,0 +1,75 @@
+# Gera github-metrics.svg com lowlighter/metrics e faz commit no repositório do perfil.
+# Documentação: https://github.com/lowlighter/metrics
+#
+# Para ligar/desligar um módulo, troque "yes" por "no" (ou o contrário) na linha plugin_*.
+name: Metrics
+
+on:
+  # Diariamente às 09:00 UTC = 06:00 em São Paulo (o cron do GitHub é sempre em UTC)
+  schedule: [{cron: "0 9 * * *"}]
+  # Execução manual: gh workflow run metrics.yml
+  workflow_dispatch:
+  # A cada push na main (o commit da própria Action leva "[Skip GitHub Action]" e não gera loop)
+  push: {branches: ["main"]}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: metrics
+  cancel-in-progress: false
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # ── Núcleo ────────────────────────────────────────────────────────
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: erikefernandes40
+          filename: github-metrics.svg
+          template: classic
+          config_timezone: America/Sao_Paulo
+          plugins_errors_fatal: no   # se um módulo falhar, mostra o erro no SVG em vez de quebrar o job
+
+          # ── Conteúdo base: resumo de atividade ───────────────────────────
+          # header       → nome, calendário das últimas 2 semanas, nº de contribuições
+          # activity     → totais de commits, PRs abertos, PRs revisados, issues e comentários
+          # community    → organizations, seguidores, seguindo
+          # repositories → estatísticas agregadas (stars, forks, licença, espaço em disco), sem nomes
+          # metadata     → rodapé com a data da última atualização
+          base: header, activity, community, repositories, metadata
+          # Inclui os repositórios das organizations (High-Voltage-Equipament) além dos seus.
+          repositories_affiliations: owner, collaborator, organization_member
+          repositories: 300
+          # base_indepth fica DESLIGADO de propósito: sem ele, o total de commits usa a Search API
+          # (que enxerga os commits na org). Ligado, ele troca isso por várias consultas ano a ano.
+          base_indepth: no
+
+          # ── Calendário de contribuições (vista isométrica + sequência/streak) ─
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+          # ── Linguagens mais usadas nos repositórios em que você contribuiu ─
+          plugin_languages: yes
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 1%
+          plugin_languages_details: percentage
+          plugin_languages_other: yes
+          # indepth clonaria os repositórios no runner. Fica desligado porque é código privado da empresa.
+          plugin_languages_indepth: no
+
+          # ── Repositórios em destaque (somente públicos, escolhidos à mão) ─
+          plugin_repositories: yes
+          plugin_repositories_featured: FinCoupleBackend, mercado-vivo, Asp-net-core-8-with-docker, Notifications-Service
+
+          # ── Extras opcionais (desligados) ─────────────────────────────────
+          # Hábitos: horários/dias mais ativos e linguagens usadas nas últimas semanas
+          plugin_habits: no
+          plugin_habits_charts: yes
+          plugin_habits_days: 14
+          # Conquistas: destaques do que a conta já fez no GitHub
+          plugin_achievements: no
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: B
